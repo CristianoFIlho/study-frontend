@@ -13,3 +13,5 @@ let valor = ''
 let number = 1
 let pqp = false // exemplo badSmell
 
+
+
