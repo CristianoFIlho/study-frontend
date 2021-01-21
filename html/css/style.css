@@ -1,12 +1,16 @@
 
 *{
-       border: 1px solid blue;
+    color: red;
 }
 
-body{
-   color: red; 
-    font-size: 20px;
-    border: 1px solid blue;
-
+h2{/*3*/
+    color: burlywood;
 }
 
+ h2.green{ /*2*/
+    color:green;
+}
+
+h2#yellow{/*1*/
+    color:yellow;
+}
