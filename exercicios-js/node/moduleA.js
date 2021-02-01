@@ -1,5 +1,5 @@
 console.log(this)
 
-this.hello = 'Fala Pessoal'
-exports.welcame = 'Bem vindo ao node!'
-module.exports.seeyouLater = 'Até próximo exemplo'
+this.hello = 'Hello folks'
+exports.welcame = 'welcome to node!'
+module.exports.seeyouLater = 'until the next example'
