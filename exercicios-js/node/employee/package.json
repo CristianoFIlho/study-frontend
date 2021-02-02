@@ -1,0 +1,17 @@
+{
+  "name": "employee",
+  "version": "1.0.0",
+  "description": "(index.js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "autotest"
+  },
+  "keywords": [
+    "dqwdqwddw"
+  ],
+  "author": "Cristiano Filho",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
