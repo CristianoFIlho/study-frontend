@@ -2,8 +2,10 @@
   "name": "employee",
   "version": "1.0.0",
   "description": "(index.js)",
-  "main": "index.js",
+  "main": "employee.js",
   "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
     "test": "autotest"
   },
   "keywords": [
