@@ -2,6 +2,7 @@ const port = 3003
 
 const express = require('express')
 const app = express()
+const database = require('./database')
 
 app.get('/products', (req, res, next) => {
     console.log('Middleware 1....')
@@ -9,11 +10,29 @@ app.get('/products', (req, res, next) => {
 })
 
 app.get('/products', (req, res, next) => {
-    res.send({
-        name: 'Notebook',
-        price: 123.45
+    res.send(database.getProduct())
+
+})
+
+app.get('/ products /:id:name', (req, res, next) => {
+    res.send(database.getProduct(req.params.id))
+})
+
+app.post('/products', (req, res, next) => {
+    const product = database.saveProduct({
+        name: req.body.name,
+        price: req.body.price
+
     })
-}) // convert json
+    res.send(product)
+
+})
+
+app.listen(port, () => {
+
+})
+
+// convert json
 app.listen(port, () => {
     console.log(`Server execute  in port ${port}.`)
 
