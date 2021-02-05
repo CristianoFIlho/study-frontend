@@ -5,25 +5,32 @@ const sequence = {
     }
 }
 
-const product = {}
+const products = {}
 
 function saveProduct(product) {
     if (!product.id) product.id = sequence.id
-    product[product.id] = product
+    products[product.id] = product
     return product
 
 }
 
 function getProduct(id) {
-    return product[id] || {}
+    return products[id] || {}
 }
 
 function getProducts() {
     return Object.values(products)
 }
 
+function removeProduct(id) {
+    const product = products[id]
+    delete products[id]
+    return product
+}
+
 module.exports = {
     saveProduct,
     getProduct,
-    getProducts
+    getProducts,
+    removeProduct
 }
