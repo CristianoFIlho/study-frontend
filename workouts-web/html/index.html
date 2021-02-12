@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page html</title>
-</head>
+    <style>
+      #content {
+        padding: 30px 0px;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>workouts HTML</h1>
+      <h1>workouts HTML</h1>
     </header>
-    <nav>
-        <a href wm-nav="workouts/test.html">Test</a>
-        <a href wm-nav="workouts/temp.html">test2</a>
 
+    <nav>
+      <a href wm-nav="workouts/test.html"> Test</a>
+      <a href wm-nav="workouts/temp.html"> test2</a>
+      <a href wm-nav="workouts/text1.html"> 01 - Text 1</a>
+      <a href wm-nav="workouts/text2.html"> 02 - Text 2</a>
+      <a href wm-nav="workouts/list.html"> 03 - workouts 3</a>
+      <a href wm-nav="workouts/lists.html"> 04 - List 4</a>
+      <a href wm-nav="workouts/nestedlist.html"> 05 - nestad list </a>
     </nav>
 
     <section id="content"></section>
-    <footer>
-        Curse Web modern
-    </footer>
+    <footer>Curse Web modern</footer>
     <script>
-        document.querySelectorAll('[wm-nav]').forEach(link => {
-            const content = document.getElementById('content')
-            link.onclick = function (e) {
-                e.preventDefault()
-                fetch(link.getAttribute('wm-nav'))
-                    .then(resp => resp.text())
-                    .then(html => content.innerHTML = html)
-            }
-        })
+      document.querySelectorAll("[wm-nav]").forEach((link) => {
+        const content = document.getElementById("content");
+        link.onclick = function (e) {
+          e.preventDefault();
+          fetch(link.getAttribute("wm-nav"))
+            .then((resp) => resp.text())
+            .then((html) => (content.innerHTML = html));
+        };
+      });
     </script>
-</body>
-
+  </body>
 </html>
