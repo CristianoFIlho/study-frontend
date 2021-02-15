@@ -1,7 +1,49 @@
 <h1>Form</h1>
 
-<form action="http://localhost:3003/users" method="POST">
-    <input type="text" name="name">
-    <button>Include</button>
-    
+<form method="POST">
+  <input type="hidden" name="id" value="3" />
+  <input type="text" name="name" />
+  <input type="password" name="senha" />
+  <textarea name="bio" cols="30" rows="10"></textarea>
+
+  <div>
+    <input type="radio" name="tipo" value="Admin" /> Admin
+    <input type="radio" name="tipo" value="Regular" />
+    Regular
+    <input type="radio" name="tipo" value="Teacher" />
+    Teacher
+  </div>
+
+  <div><input type="checkbox" name="active" /> Active</div>
+
+  <select name="state">
+    <option value="">Select</option>
+    <option value="ac">Acre</option>
+    <option value="ba">Bahia</option>
+    <option value="ce">Ceará</option>
+  </select>
+
+  <select name="interest" multiple size="5">
+    <option value="js">js</option>
+    <option value="java">java</option>
+    <option value="mySQL">mySQL</option>
+    <option value="phyton">phyton</option>
+    <option value="angular">angular</option>
+  </select>
+  <button formaction="http://localhost:3003/users/3">to alter</button>
+  <button formaction="http://localhost:3003/users">Include</button>
 </form>
+
+<style>
+  input,
+  textarea,
+  select {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: inline;
+  }
+</style>
