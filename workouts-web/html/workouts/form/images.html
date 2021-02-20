@@ -17,7 +17,7 @@
     />
   </p>
 
-  <p class="circular">
+  <p class="circle">
     <img
       src="http://files.cod3r.com.br/curso-web/imagem3.png"
       alt="Rio de Janeiro"
@@ -25,7 +25,7 @@
     />
   </p>
 
-  <p class="texto">
+  <p class="text">
     <img
       src="http://files.cod3r.com.br/curso-web/avatar.jpg"
       alt="Avatar"
@@ -40,7 +40,7 @@
     kjheekehekejhe e ekjehekhje ee
   </p>
 
-  <p class="cidade"></p>
+  <p class="city"></p>
 
   <p>
     <picture>
@@ -62,20 +62,20 @@
     display: none;
   }
 
-  .circular {
+  .circle {
     width: 513px;
     background-color: #444;
   }
 
-  .texto {
+  .text {
     width: 400px;
   }
 
-  .texto img {
+  .text img {
     margin-right: 10px;
   }
 
-  .cidade {
+  .city {
     width: 513px;
     height: 342px;
     background-image: url("http://files.cod3r.com.br/curso-web/imagem4.jpg");
@@ -102,13 +102,13 @@
     console.log("Abort!!!");
   });
 
-  /*function slider() {
-   const elements = document.querySelectorAll("[wm-slider] > p");
+  function slider() {
+    const elements = document.querySelectorAll("[wm-slider] > p");
     const slides = Array.from(elements);
-   exibirSlide(slides, slides[0]);
+    displaySlide(slides, slides[0]);
   }
 
- function exibirSlide(slides, slide) {
+  function displaySlide(slides, slide) {
     slide.style.display = "block";
 
     const start = innerWidth;
@@ -118,14 +118,14 @@
 
     move(slide, start, end, 5, () => {
       slide.style.display = "none";
-      exibirSlide(slides, getProximo(slides, slide));
+      displaySlide(slides, getNext(slides, slide));
     });
   }
 
-  function getProximo(list, current) {
+  function getNext(list, current) {
     const i = list.indexOf(current) + 1;
     return i < list.length ? list[i] : list[0];
   }
 
-  slider();*/
+  slider();
 </script>
