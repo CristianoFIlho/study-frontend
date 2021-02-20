@@ -1,34 +1,73 @@
-<p>
-  <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro de
-  Cidade" width="513" height="342" title="Muro da Cidade por Tarso Bessa"
-</p>
+<div wm-slider>
+  <p>
+    <img
+      src="http://files.cod3r.com.br/curso-web/imagem1.jpg"
+      alt="Muro da Cidade"
+      width="513"
+      height="342"
+      title="Mura da Cidade por tarso Bessa"
+    />
+  </p>
+  <p>
+    <img
+      src="http://files.cod3r.com.br/curso-web/imagem2.gif"
+      alt="Into Cod3r"
+      height="342"
+    />
+  </p>
 
-<p>
-  <img
-    src="http://files.cod3r.com.br/curso-web/imagem2.gif"
-    alt="Intro cd3r"
-    height="342"
-  />
-</p>
+  <p class="circle">
+    <img
+      src="http://files.cod3r.com.br/curso-web/imagem3.png"
+      alt="Rio de Janeiro"
+      height="342"
+    />
+  </p>
 
-<p class="circle">
-  <img
-    src="http://files.cod3r.com.br/curso-web/imagem3.png"
-    alt="Rio de Janeiro"
-    height="342"
-  />
-</p>
-<picture>
-  <source
-    srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
-    media="(min-width: 600px)"
-  />
+  <p class="text">
+    <img
+      src="http://files.cod3r.com.br/curso-web/avatar.jpg"
+      alt="Avatar"
+      height="50"
+      align="left"
+    />
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias corporis
+    alias libero. Magni ut, quidem quo voluptates fugit non sint possimus,
+    recusandae dignissimos, repudiandae perferendis harum porro dolore ea?
+    Ullam.
+  </p>
 
-  <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo" />
-</picture>
-<p></p>
+  <p class="city"></p>
+
+  <p>
+    <picture>
+      <source
+        srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+        media="(min-width: 600px )"
+      />
+    </picture>
+  </p>
+</div>
 
 <style>
+  p {
+    position: absolute;
+    display: none;
+  }
+
+  circle {
+    width: 513px;
+    background-color: #444;
+  }
+
+  .text {
+    width: 400px;
+  }
+
+  .text img {
+    margin-right: 10px;
+  }
+
   .city {
     width: 513px;
     height: 342px;
@@ -37,31 +76,39 @@
     background-repeat: no-repeat;
     background-size: 200%;
   }
-
-  .circle {
-    width: 513px;
-    background-color: black;
-  }
-
-  .text {
-    width: 400px;
-  }
-
-  .text img {
-    margin: 0px 12px 2px 0px;
-  }
 </style>
 
-<p class="text">
-  <img
-    src="http://files.cod3r.com.br/curso-web/avatar.jpg"
-    alt="Avatar"
-    height="50"
-    align="left"
-  />
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eos. Quaerat,
-  quo! Facilis cum amet libero alias consequuntur sint quos aperiam optio quis
-  eius atque, numquam, vero est omnis. Magni!
-</p>
+<script>
+  function move(elem, first, end, pass, callback) {
+    const newFirst = first - pass;
+    if (newFirst >= end) {
+      elem.style.left = newFirst + 'px';
+      setTimeout(() => move(elem, newFirst, end, pass, callback), 7);
+    }else{
+      callback()
+  }
 
-<p class="city"></p>
+  const p = document.querySelector('[wm-slider] > p')
+  p.style.display ='block'
+  move(p, 1500, -400, 5, () =>{
+    console.log('Abort!')
+  })
+
+
+  function displaySlide(slides, slide){
+    slide.style.display = 'block'
+    const first = innerWidth
+    const end = slide.clientWidth
+
+    slide.style.left = `${first}px`
+
+    move(slide, first,  end, 5, () =>{
+        slide.style.display = 'none'
+        displaySlide(slides, getNext(slides, slide))
+    })
+  }
+  function getNext(list, current){
+    const i = list.indexOf(current) + 1
+    return i < list.length ? list[i] : list[0]
+  }
+</script>
