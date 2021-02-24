@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Especificidade CSS</title>
     <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+      /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity 
+        
+        Em linhas gerais... 
+
+        1. regras
+        2. seletores mais específicos
+        3. útima regra processada (empate)
+
+        */
+
+      p {
+        background-color: beige;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <p class='observacao'>Olha essa observação!!!!</p>
-</body>
-
+  <body>
+    <p class="observacao">Olha essa observação!!!!</p>
+  </body>
 </html>
