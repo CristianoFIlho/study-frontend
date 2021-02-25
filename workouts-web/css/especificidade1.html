@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <title>Especificidade CSS</title>
     <style>
-      /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity 
-        
-        Em linhas gerais... 
+      /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity
+
+        Em linhas gerais...
 
         1. regras
         2. seletores mais específicos
@@ -16,6 +16,16 @@
 
       p {
         background-color: beige;
+      }
+      .observacao {
+        background-color: bisque !important;
+        border: dashed 5px;
+        padding: 200px;
+        font-size: 40px;
+      }
+
+      p.observacao {
+        background: linear-gradient(to right, red, yellow);
       }
     </style>
   </head>
