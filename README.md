@@ -40,11 +40,11 @@ Cristiano Filho – [Deploy Project](https://cristianofilho.com.br/mediasocial.h
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
-[https://github.com/CristianoFIlho/dispositivos-moveis](https://github.com/CristianoFIlho/dispositivos-moveis)
+[https://github.com/CristianoFIlho/study-frontend](https://github.com/CristianoFIlho/study-frontend.git)
 
 ## 🧙‍♂️ Contribution
 
-1. Make the _fork_ of the project (<https://github.com/CristianoFIlho/dispositivos-moveis/fork>)
+1. Make the _fork_ of the project (<https://github.com/CristianoFIlho/study-frontend.git/fork>)
 2. Create a _branch_ for your modification (`git checkout -b my-new-resource`)
 3. Do _commit_ (`git commit -am 'Adding a new resource ...'`)
 4. _Push_ (`git push origin my-new-feature`)
